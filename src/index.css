@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 210 20% 96%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 217 71% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 217 40% 18%;
+    --accent-foreground: 217 71% 60%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 20% 16%;
+    --input: 222 20% 16%;
+    --ring: 217 71% 33%;
+
+    --radius: 0.75rem;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 217 71% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 30% 12%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 222 20% 14%;
+    --sidebar-ring: 217 71% 33%;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 20% 96%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 20% 96%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 217 71% 33%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 222 30% 14%;
+    --accent-foreground: 210 20% 96%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 20% 96%;
+    --border: 222 20% 16%;
+    --input: 222 20% 16%;
+    --ring: 217 71% 33%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --sidebar-background: 222 47% 4%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 217 71% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 30% 10%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 222 20% 14%;
+    --sidebar-ring: 217 71% 33%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Chalkboard texture overlay */
+.chalkboard-bg {
+  background-color: hsl(222 47% 5%);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, hsla(217, 71%, 33%, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, hsla(217, 71%, 33%, 0.04) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Chalk-style heading font */
+.font-chalk {
+  font-family: 'Caveat', cursive;
+}
+
+/* Chalk card with dashed border */
+.chalk-card {
+  @apply border-dashed border-2 border-border bg-card rounded-lg;
+}
