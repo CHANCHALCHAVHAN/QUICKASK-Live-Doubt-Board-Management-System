@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=700&lines=⚡+QUICKASK;Live+Doubt+Board+Management;Classroom+Made+Smarter!" alt="Typing SVG" />
+# ⚡ QUICKASK
+### 🎓 Live Doubt Board Management System
 
 <br/>
 
